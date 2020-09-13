@@ -9,6 +9,8 @@
         <footer class="flex justify-between">
             <img class="rounded-full mr-2"
                  src="{{ auth()->user()->avatar }}"
+                 width="40"
+                 height="40"
                  alt="avatar">
             <button type="submit" class="bg-blue-500 rounded-lg shadow py-2 px-2 text-white">Tweet!</button>
         </footer>
