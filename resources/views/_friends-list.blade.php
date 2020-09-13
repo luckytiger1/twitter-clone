@@ -1,15 +1,15 @@
 <div class="bg-blue-100 rounded-lg p-4">
 
-    <h3 class="font-bold text-xl mb-4">Friends</h3>
+    <h3 class="font-bold text-xl mb-4">Following</h3>
 
     <ul>
-        @foreach(range(1,8) as $index)
+        @foreach(auth()->user()->follows as $user)
             <li class="mb-4">
                 <div class="flex items-center">
-                    <img class="rounded-full mr-2"
-                         src="https://steamcdn-a.akamaihd.net/steamcommunity/public/images/avatars/84/847926e30614722e6cbc417a7180725cc1e975c5.jpg"
+                    <img class="rounded-full mr-2 flex-shrink-0"
+                         src="{{ $user->avatar }}"
                          alt="avatar">
-                    John Doe
+                    {{ $user->name }}
                 </div>
             </li>
         @endforeach
