@@ -37,4 +37,14 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function getAvatarAttribute()
+    {
+        return "https://api.adorable.io/avatars/50/" . $this->email . ".png";
+    }
+
+    public function timeline()
+    {
+        return Tweet::where('user_id', $this->id)->latest()->get();
+    }
 }
