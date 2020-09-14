@@ -20,8 +20,10 @@
             </div>
 
             <div class="flex">
-                <a href="" class="rounded-full border border-gray-300 py-2 px-4 text-black text-xs mr-3">Edit
-                    Profile</a>
+                @can('edit', $user)
+                    <a href="{{ $user->path('edit') }}" class="rounded-full border border-gray-300 py-2 px-4 text-black text-xs mr-3">Edit
+                        Profile</a>
+                @endcan
                 <x-follow-button :user="$user"></x-follow-button>
             </div>
         </div>
