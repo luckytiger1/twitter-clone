@@ -55,7 +55,6 @@
                        type="file"
                        name="avatar"
                        id="avatar"
-                       required
                 >
 
                 <img src="{{ $user->avatar }}"
