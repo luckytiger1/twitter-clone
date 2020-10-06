@@ -24,8 +24,10 @@
   <component name="ChangeListManager">
     <list default="true" id="9688bed1-f6f8-483b-a606-afbb815146df" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_09_13_071458_create_tweets_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_09_13_071458_create_tweets_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker/nginx/logs/access.log" beforeDir="false" afterPath="$PROJECT_DIR$/docker/nginx/logs/access.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/_publish-tweet-panel.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/_publish-tweet-panel.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/_sidebar-links.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/_sidebar-links.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -160,7 +162,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../blog-rocketfirm" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
     <property name="settings.editor.selected.configurable" value="MTConfigurable" />
@@ -206,7 +208,7 @@
       <workItem from="1601395010957" duration="73000" />
       <workItem from="1601805480553" duration="27000" />
       <workItem from="1601813096039" duration="2951000" />
-      <workItem from="1601904246738" duration="3381000" />
+      <workItem from="1601904246738" duration="8973000" />
     </task>
     <servers />
   </component>
@@ -242,26 +244,26 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="741" y="185" key="#com.jetbrains.php.refactoring.pullPush.pullUp.PhpPullUpDialog#1/0.27.1920.1053@0.27.1920.1053" timestamp="1600183052159" />
-    <state x="688" y="307" key="FileChooserDialogImpl" timestamp="1601805506113">
+    <state x="688" y="307" key="FileChooserDialogImpl" timestamp="1601913507273">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="688" y="307" key="FileChooserDialogImpl/0.27.1920.1053@0.27.1920.1053" timestamp="1601805506113" />
+    <state x="688" y="307" key="FileChooserDialogImpl/0.27.1920.1053@0.27.1920.1053" timestamp="1601913507273" />
     <state x="525" y="242" key="NewPhpClassDialog" timestamp="1600183014167">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="525" y="242" key="NewPhpClassDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1600183014167" />
-    <state x="704" y="469" key="NewPhpFileDialog" timestamp="1600013524320">
+    <state x="704" y="469" key="NewPhpFileDialog" timestamp="1601953324384">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="704" y="469" key="NewPhpFileDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1600013524320" />
+    <state x="704" y="469" key="NewPhpFileDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1601953324384" />
     <state x="412" y="208" width="1280" height="736" key="SettingsEditor" timestamp="1601393430868">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="412" y="208" width="1280" height="736" key="SettingsEditor/0.27.1920.1053@0.27.1920.1053" timestamp="1601393430868" />
-    <state x="623" y="251" key="run.anything.popup" timestamp="1599990296258">
+    <state x="623" y="251" key="run.anything.popup" timestamp="1601994428753">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="623" y="251" key="run.anything.popup/0.27.1920.1053@0.27.1920.1053" timestamp="1599990296258" />
+    <state x="623" y="251" key="run.anything.popup/0.27.1920.1053@0.27.1920.1053" timestamp="1601994428753" />
     <state x="572" y="256" width="774" height="678" key="search.everywhere.popup" timestamp="1601292092175">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
