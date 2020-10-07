@@ -14,10 +14,14 @@
                 {{ $tweet->user->name }}
             </a>
         </h5>
+        <span>
+            {{ $tweet->created_at->diffForHumans() }}
+        </span>
 
         <p class="text-sm">
             {{ $tweet->body }}
         </p>
-        <x-like-buttons :tweet="$tweet" />
+        <img src="{{ $tweet->image }}" alt="">
+        <x-like-buttons :tweet="$tweet"/>
     </div>
 </div>

@@ -1,3 +1,4 @@
+import $ from 'jquery';
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes Vue and other libraries. It is a great starting point when
@@ -30,3 +31,24 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
 const app = new Vue({
     el: '#app',
 });
+
+const input = document.querySelector('#image');
+
+
+function updateImageDisplay() {
+
+    const curFiles = input.files;
+    console.log(curFiles)
+    for (const file of curFiles) {
+
+        const image = document.querySelector('#thumbnil');
+        image.src = URL.createObjectURL(file);
+    }
+
+}
+
+function main() {
+    input.addEventListener('change', updateImageDisplay);
+}
+
+main();

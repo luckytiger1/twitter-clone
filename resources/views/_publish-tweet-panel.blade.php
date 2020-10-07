@@ -8,22 +8,25 @@
                          src="{{ auth()->user()->avatar }}"
                          width="40"
                          height="40"
-                         alt="avatar">
+                         alt="avatar"
+
+                    >
                     <div>
                     </div>
                 </div>
             </footer>
 
             <div class="w-full">
-
                 <label>
                     <textarea name="body" class="w-full" placeholder="What's new?"></textarea>
                 </label>
                 <hr class="my-4">
             </div>
-
         </div>
 
+        <div id="dvPreview">
+            <img id="thumbnil" style="width:70%; margin-top:15px; margin-bottom: 15px" src="" alt=""/>
+        </div>
         <div class="flex justify-between">
             <div class="flex">
                 <label for="image">
