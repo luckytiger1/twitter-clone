@@ -39,7 +39,7 @@ trait Likeable
             $this->likes()->updateOrCreate([
                 'user_id' => $user ? $user->id : auth()->id(),
             ], [
-                'liked' => $liked
+                'liked' => !$liked
             ]);
 
         } else {

@@ -1,4 +1,4 @@
-<div class="border border-blue-400 rounded-lg px-8 py-6 mb-8">
+<div class="border border-blue-400 rounded-lg bg-white px-8 py-6 mb-8">
     <form method="POST" action="/tweets" enctype="multipart/form-data">
         @csrf
         <div class="flex row">
