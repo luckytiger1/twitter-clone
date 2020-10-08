@@ -34,31 +34,33 @@ trait Likeable
     public function like($user = null, $liked = true)
     {
 
-        if ($this->likes()->first() != null && $this->likes()->firstOrFail()->liked != $liked) {
-
-            $this->likes()->updateOrCreate([
-                'user_id' => $user ? $user->id : auth()->id(),
-            ], [
-                'liked' => !$liked
-            ]);
-
-        } else {
-            if ($this->likes()->first() == null) {
-                $this->likes()->updateOrCreate([
-                    'user_id' => $user ? $user->id : auth()->id(),
-                ], [
-                    'liked' => $liked
-                ]);
-            } else {
-
-                $this->likes()->first()->delete();
-            }
-        }
+//        if ($this->likes()->first() != null && $this->likes()->firstOrFail()->liked != $liked) {
+//
+//            $this->likes()->updateOrCreate([
+//                'user_id' => $user ? $user->id : auth()->id(),
+//            ], [
+//                'liked' => !$liked
+//            ]);
+//
+//        } else {
+//            if ($this->likes()->first() == null) {
+        $this->likes()->updateOrCreate([
+            'user_id' => $user ? $user->id : auth()->id(),
+        ], [
+            'liked' => $liked
+        ]);
+//            } else {
+//
+//                $this->likes()->first()->delete();
+//            }
+//        }
     }
 
     public function dislike($user = null)
     {
-        $this->like($user, false);
+//        $this->like($user, false);
+
+        $this->likes()->where('user_id', current_user()->id)->delete();
     }
 
     public function isLikedBy(User $user)
