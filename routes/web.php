@@ -34,6 +34,8 @@ Route::middleware('auth')->group(function () {
         ->middleware('can:edit,user');
 
     Route::get('/explore', [\App\Http\Controllers\ExploreController::class, 'index']);
+
+    Route::post('/comments', [\App\Http\Controllers\CommentController::class, 'store']);
 });
 
 Route::get('/profiles/{user:username}', [\App\Http\Controllers\ProfilesController::class, 'show'])
