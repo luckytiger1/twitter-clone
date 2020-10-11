@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use App\Likeable;
+use App\Saveable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 

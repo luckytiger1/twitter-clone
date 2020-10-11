@@ -56,10 +56,10 @@ class User extends Authenticatable
             ->get();
     }
 
-//    public function bookmarkTimeline()
-//    {
-//        return Tweet::
-//    }
+    public function bookmarkTimeline()
+    {
+        return Bookmark::where('user_id', $this->id)->get();
+    }
 
     public function tweets()
     {

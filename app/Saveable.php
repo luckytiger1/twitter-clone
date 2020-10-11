@@ -4,6 +4,7 @@
 namespace App;
 
 
+use App\Models\Bookmark;
 use App\Models\User;
 use Illuminate\Database\Eloquent\Builder;
 
@@ -19,32 +20,32 @@ trait Saveable
         );
     }
 
-    public function likes()
+    public function saves()
     {
-        return $this->hasMany(Like::class);
+        return $this->hasMany(Bookmark::class, 'tweet_id');
     }
 
-    public function isDislikedBy(User $user)
-    {
-        return (bool)$user->likes->where('tweet_id', $this->id)->where('liked', false)->count();
-    }
+//    public function isUnSavedBy(User $user)
+//    {
+//        return (bool)$user->saves->where('tweet_id', $this->id)->where('saved', false)->count();
+//    }
 
-    public function like($user = null, $liked = true)
+    public function saveTweet($user = null, $saved = true)
     {
-        $this->likes()->updateOrCreate([
+        $this->saves()->updateOrCreate([
             'user_id' => $user ? $user->id : auth()->id(),
         ], [
-            'liked' => $liked
+            'saved' => $saved
         ]);
     }
 
-    public function dislike($user = null)
+    public function unSaveTweet($user = null)
     {
-        $this->likes()->where('user_id', current_user()->id)->delete();
+        $this->saves()->where('user_id', current_user()->id)->delete();
     }
 
-    public function isLikedBy(User $user)
+    public function isSavedBy(User $user)
     {
-        return (bool)$user->likes->where('tweet_id', $this->id)->where('liked', true)->count();
+        return (bool)$user->bookmarks->where('tweet_id', $this->id)->where('saved', true)->count();
     }
 }
