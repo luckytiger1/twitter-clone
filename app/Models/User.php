@@ -56,14 +56,29 @@ class User extends Authenticatable
             ->get();
     }
 
+//    public function bookmarkTimeline()
+//    {
+//        return Tweet::
+//    }
+
     public function tweets()
     {
         return $this->hasMany(Tweet::class)->withLikes();
     }
 
+    public function savedTweets()
+    {
+        return $this->hasMany(Tweet::class)->withBookmarks();
+    }
+
     public function likes()
     {
         return $this->hasMany(Like::class);
+    }
+
+    public function bookmarks()
+    {
+        return $this->hasMany(Bookmark::class);
     }
 
     public function path($append = '')

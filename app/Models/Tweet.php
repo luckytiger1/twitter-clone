@@ -10,6 +10,7 @@ class Tweet extends Model
 {
     use HasFactory;
     use Likeable;
+    use Saveable;
 
     protected $guarded = [];
 

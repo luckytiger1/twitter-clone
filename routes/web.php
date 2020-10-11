@@ -22,8 +22,13 @@ Route::middleware('auth')->group(function () {
     Route::get('/tweets', [\App\Http\Controllers\TweetsController::class, 'index'])->name('home');
     Route::post('/tweets', [\App\Http\Controllers\TweetsController::class, 'store']);
 
+    Route::get('/bookmarks', [\App\Http\Controllers\BookmarksController::class, 'index'])->name('bookmarks');
+
     Route::post('/tweets/{tweet}/like', [\App\Http\Controllers\TweetLikesController::class, 'store']);
     Route::delete('/tweets/{tweet}/like', [\App\Http\Controllers\TweetLikesController::class, 'destroy']);
+
+    Route::post('/tweets/{tweet}/save', [\App\Http\Controllers\TweetBookmarksController::class, 'store']);
+    Route::delete('/tweets/{tweet}/save', [\App\Http\Controllers\TweetBookmarksController::class, 'destroy']);
 
     Route::post('/profiles/{user:username}/follow', [\App\Http\Controllers\FollowsController::class, 'store'])
         ->name('follow');
@@ -33,7 +38,7 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profiles/{user:username}', [\App\Http\Controllers\ProfilesController::class, 'update'])
         ->middleware('can:edit,user');
 
-    Route::get('/explore', [\App\Http\Controllers\ExploreController::class, 'index']);
+    Route::get('/explore', [\App\Http\Controllers\ExploreController::class, 'index'])->name('explore');
 
     Route::post('/comments', [\App\Http\Controllers\CommentController::class, 'store']);
 });
