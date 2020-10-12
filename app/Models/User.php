@@ -7,6 +7,7 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Support\Facades\DB;
 
 class User extends Authenticatable
 {
@@ -58,7 +59,10 @@ class User extends Authenticatable
 
     public function bookmarkTimeline()
     {
-        return Bookmark::where('user_id', $this->id)->get();
+        return Tweet::join('bookmarks', 'tweets.id', '=', 'bookmarks.tweet_id')
+            ->where('bookmarks.user_id', $this->id)
+            ->orderByDesc('bookmarks.created_at')
+            ->get();
     }
 
     public function tweets()

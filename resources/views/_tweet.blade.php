@@ -80,7 +80,7 @@
         @if($tweet->isSavedBy(current_user()))
 
             <form method="POST"
-                  action="/tweets/{{ $tweet->id }}/like"
+                  action="/tweets/{{ $tweet->id }}/save"
             >
                 @csrf
                 @method('DELETE')
@@ -98,7 +98,7 @@
         @else
 
             <form method="POST"
-                  action="/tweets/{{ $tweet->id }}/like"
+                  action="/tweets/{{ $tweet->id }}/save"
             >
                 @csrf
                 <button type="submit"
