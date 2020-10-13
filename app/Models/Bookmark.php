@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Bookmark extends Model
 {
+    use \Backpack\CRUD\app\Models\Traits\CrudTrait;
     protected $guarded = [];
 
     public function tweet()

@@ -23,16 +23,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9688bed1-f6f8-483b-a606-afbb815146df" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/twitter-clone-laravel.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/twitter-clone-laravel.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/BookmarksController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/BookmarksController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Bookmark.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Bookmark.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Tweet.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Tweet.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Saveable.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Saveable.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/factories/UserFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/UserFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker/nginx/logs/access.log" beforeDir="false" afterPath="$PROJECT_DIR$/docker/nginx/logs/access.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/nginx/logs/error.log" beforeDir="false" afterPath="$PROJECT_DIR$/docker/nginx/logs/error.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/_tweet.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/_tweet.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -156,6 +153,15 @@
       <path value="$PROJECT_DIR$/vendor/guzzlehttp/guzzle" />
       <path value="$PROJECT_DIR$/vendor/tijsverkoyen/css-to-inline-styles" />
       <path value="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/event-manager" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/cache" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/dbal" />
+      <path value="$PROJECT_DIR$/vendor/backpack/crud" />
+      <path value="$PROJECT_DIR$/vendor/creativeorange/gravatar" />
+      <path value="$PROJECT_DIR$/vendor/prologue/alerts" />
+      <path value="$PROJECT_DIR$/vendor/ocramius/package-versions" />
+      <path value="$PROJECT_DIR$/vendor/laracasts/generators" />
+      <path value="$PROJECT_DIR$/vendor/backpack/generators" />
     </include_path>
   </component>
   <component name="ProjectId" id="1hRbWI7pgE5kGB73VdzljKAMzde" />
@@ -221,7 +227,7 @@
       <workItem from="1602426975758" duration="7103000" />
       <workItem from="1602494303486" duration="1698000" />
       <workItem from="1602502635411" duration="7874000" />
-      <workItem from="1602569384682" duration="9135000" />
+      <workItem from="1602569384682" duration="10532000" />
     </task>
     <servers />
   </component>
