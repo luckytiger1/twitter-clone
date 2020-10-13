@@ -76,7 +76,7 @@
                 </button>
             </form>
         @endif
-
+{{--        {{dd($tweet->isSavedBy(current_user()))}}--}}
         @if($tweet->isSavedBy(current_user()))
 
             <form method="POST"

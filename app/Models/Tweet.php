@@ -30,4 +30,9 @@ class Tweet extends Model
         return $this->hasMany(Comment::class)->latest();
     }
 
+    public function bookmarks()
+    {
+        return $this->hasMany(Bookmark::class);
+    }
+
 }

@@ -22,6 +22,7 @@ trait Saveable
 
     public function saves()
     {
+//        dd($this);
         return $this->hasMany(Bookmark::class, 'tweet_id');
     }
 
@@ -41,6 +42,7 @@ trait Saveable
 
     public function unSaveTweet($user = null)
     {
+//        dd($user->bookmarks->where('tweet_id', $this->id));
         $this->saves()->where('user_id', current_user()->id)->delete();
     }
 

@@ -9,13 +9,14 @@ class Bookmark extends Model
 {
     protected $guarded = [];
 
-    public function user()
-    {
-        return $this->belongsTo(User::class, 'user_id');
-    }
-
     public function tweet()
     {
-        return $this->belongsTo(Tweet::class, 'tweet_id');
+        return $this->belongsTo(Tweet::class);
+    }
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+
     }
 }

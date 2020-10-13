@@ -60,8 +60,11 @@ class User extends Authenticatable
     public function bookmarkTimeline()
     {
         return Tweet::join('bookmarks', 'tweets.id', '=', 'bookmarks.tweet_id')
+            ->join('comments', 'tweets.id', '=', 'comments.tweet_id')
             ->where('bookmarks.user_id', $this->id)
+            ->select('tweets.*')
             ->orderByDesc('bookmarks.created_at')
+            ->distinct()
             ->get();
     }
 
