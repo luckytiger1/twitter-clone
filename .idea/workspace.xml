@@ -23,13 +23,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9688bed1-f6f8-483b-a606-afbb815146df" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/twitter-clone-laravel.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/twitter-clone-laravel.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Saveable.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Saveable.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/BookmarkCrudController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/BookmarkCrudController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/LikeCrudController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/LikeCrudController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/TweetCrudController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/TweetCrudController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Bookmark.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Bookmark.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Like.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Like.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Tweet.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Tweet.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker/nginx/logs/access.log" beforeDir="false" afterPath="$PROJECT_DIR$/docker/nginx/logs/access.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/nginx/logs/error.log" beforeDir="false" afterPath="$PROJECT_DIR$/docker/nginx/logs/error.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -173,7 +176,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Http/Controllers" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../blog-rf/blog-rocketfirm" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
     <property name="settings.editor.selected.configurable" value="MTConfigurable" />
@@ -227,7 +230,8 @@
       <workItem from="1602426975758" duration="7103000" />
       <workItem from="1602494303486" duration="1698000" />
       <workItem from="1602502635411" duration="7874000" />
-      <workItem from="1602569384682" duration="10532000" />
+      <workItem from="1602569384682" duration="11331000" />
+      <workItem from="1602667482712" duration="4683000" />
     </task>
     <servers />
   </component>
@@ -267,10 +271,10 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="741" y="185" key="#com.jetbrains.php.refactoring.pullPush.pullUp.PhpPullUpDialog#1/0.27.1920.1053@0.27.1920.1053" timestamp="1600183052159" />
-    <state x="688" y="307" key="FileChooserDialogImpl" timestamp="1601913507273">
+    <state x="688" y="307" key="FileChooserDialogImpl" timestamp="1602680164696">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="688" y="307" key="FileChooserDialogImpl/0.27.1920.1053@0.27.1920.1053" timestamp="1601913507273" />
+    <state x="688" y="307" key="FileChooserDialogImpl/0.27.1920.1053@0.27.1920.1053" timestamp="1602680164696" />
     <state x="525" y="242" key="NewPhpClassDialog" timestamp="1602429353180">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>

@@ -21,6 +21,16 @@ class Tweet extends Model
         return asset($value ? 'storage/' . $value : null);
     }
 
+    public function setImageAttribute($value)
+    {
+        $attribute_name = "image";
+        $disk = "public";
+        $destination_path = 'images';
+
+        $this->uploadFileToDisk($value, $attribute_name, $disk, $destination_path);
+    }
+
+
     public function user()
     {
         return $this->belongsTo(User::class);

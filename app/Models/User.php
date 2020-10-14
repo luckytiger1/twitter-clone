@@ -95,4 +95,11 @@ class User extends Authenticatable
         return $append ? "{$path}/{$append}" : $path;
     }
 
+    // or for more complicated use cases you can do
+    public function identifiableAttribute()
+    {
+        // process stuff here
+        return 'name';
+    }
+
 }
