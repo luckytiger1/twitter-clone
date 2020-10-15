@@ -76,7 +76,7 @@
                 </button>
             </form>
         @endif
-{{--        {{dd($tweet->isSavedBy(current_user()))}}--}}
+        {{--        {{dd($tweet->isSavedBy(current_user()))}}--}}
         @if($tweet->isSavedBy(current_user()))
 
             <form method="POST"
@@ -144,18 +144,7 @@
             <button type="submit" class="bg-blue-500 rounded-lg shadow py-2 px-2 text-white">Tweet!</button>
         </div>
     </form>
-    @foreach($tweet->comments as $comment)
-        <div class="flex row border border-gray-300 my-4 items-center">
-            <img class="rounded-full mr-2"
-                 width="50"
-                 height="50"
-                 src="{{ $comment->author->avatar}}"
-                 alt="avatar">
-            <p>
-                {{ $comment->body }}
-            </p>
-        </div>
-    @endforeach
+    <x-comments :tweet="$tweet"/>
     <div>
 
     </div>

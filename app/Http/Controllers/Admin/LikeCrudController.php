@@ -53,14 +53,6 @@ class LikeCrudController extends CrudController
             'label' => 'Tweet',
         ]);
 
-        CRUD::addColumn([
-            'name' => 'liked',
-            'label' => 'Liked',
-            'type' => 'boolean',
-            // optionally override the Yes/No texts
-            // 'options' => [0 => 'Active', 1 => 'Inactive']
-        ]);
-
     }
 
     /**
@@ -91,9 +83,6 @@ class LikeCrudController extends CrudController
             'model' => "App\Models\Tweet", // related model
             'attribute' => 'body',
         ]);
-
-
-        CRUD::field('liked');
 
         /**
          * Fields can be defined using the fluent syntax or array syntax:
