@@ -39,82 +39,8 @@
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                   d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
         </svg>
-        @if($tweet->isLikedBy(current_user()))
-
-            <form method="POST"
-                  action="/tweets/{{ $tweet->id }}/like"
-            >
-                @csrf
-                @method('DELETE')
-                <button type="submit"
-                        class="flex row"
-                >
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                         stroke="{{ $tweet->isLikedBy(current_user()) ? "#EB5757":"#4F4F4F" }}" class="h-6 w-6">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                              d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
-                    </svg>
-                    <span>{{ $tweet->likes()->count() }}</span>
-                </button>
-            </form>
-        @else
-            <form method="POST"
-                  action="/tweets/{{ $tweet->id }}/like"
-            >
-                @csrf
-                <button type="submit"
-                        class="flex row"
-                >
-
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                         stroke="{{ $tweet->isLikedBy(current_user()) ? "#EB5757":"#4F4F4F" }}" class="h-6 w-6">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                              d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
-                    </svg>
-                    <span>{{ $tweet->likes()->count() }}</span>
-
-                </button>
-            </form>
-        @endif
-        {{--        {{dd($tweet->isSavedBy(current_user()))}}--}}
-        @if($tweet->isSavedBy(current_user()))
-
-            <form method="POST"
-                  action="/tweets/{{ $tweet->id }}/save"
-            >
-                @csrf
-                @method('DELETE')
-                <button type="submit"
-                        class="flex row"
-                >
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                         stroke="{{ $tweet->isSavedBy(current_user()) ? "#EB5757":"#4F4F4F" }}" class="h-6 w-6">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                              d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"/>
-                    </svg>
-                    <span>{{ $tweet->saves()->count() }}</span>
-                </button>
-            </form>
-        @else
-
-            <form method="POST"
-                  action="/tweets/{{ $tweet->id }}/save"
-            >
-                @csrf
-                <button type="submit"
-                        class="flex row"
-                >
-
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                         stroke="{{ $tweet->isSavedBy(current_user()) ? "#EB5757":"#4F4F4F" }}" class="h-6 w-6">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                              d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"/>
-                    </svg>
-                    <span>{{ $tweet->saves()->count() }}</span>
-
-                </button>
-            </form>
-        @endif
+        <x-likes-button :tweet="$tweet"/>
+        <x-bookmark-button :tweet="$tweet"/>
     </div>
     <form action="/comments" method="POST">
         @csrf
@@ -148,6 +74,5 @@
     <div>
 
     </div>
-    {{--    <x-like-buttons :tweet="$tweet"/>--}}
 </div>
 

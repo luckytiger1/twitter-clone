@@ -23,11 +23,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9688bed1-f6f8-483b-a606-afbb815146df" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/components/comments.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/components/bookmark-button.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/components/like-button.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/components/retweet-button.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/LikeRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/LikeRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/nginx/logs/access.log" beforeDir="false" afterPath="$PROJECT_DIR$/docker/nginx/logs/access.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/_tweet.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/_tweet.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/components/like-buttons.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -171,7 +173,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../blog-rf/blog-rocketfirm" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
     <property name="settings.editor.selected.configurable" value="MTConfigurable" />
@@ -229,6 +231,10 @@
       <workItem from="1602667482712" duration="4683000" />
       <workItem from="1602689376689" duration="3988000" />
       <workItem from="1602748091230" duration="2367000" />
+      <workItem from="1602772846580" duration="1679000" />
+      <workItem from="1602821508156" duration="7000" />
+      <workItem from="1602842090038" duration="738000" />
+      <workItem from="1602843688921" duration="130000" />
     </task>
     <servers />
   </component>
@@ -268,18 +274,18 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="741" y="185" key="#com.jetbrains.php.refactoring.pullPush.pullUp.PhpPullUpDialog#1/0.27.1920.1053@0.27.1920.1053" timestamp="1600183052159" />
-    <state x="688" y="307" key="FileChooserDialogImpl" timestamp="1602680164696">
+    <state x="688" y="307" key="FileChooserDialogImpl" timestamp="1602843703284">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="688" y="307" key="FileChooserDialogImpl/0.27.1920.1053@0.27.1920.1053" timestamp="1602680164696" />
+    <state x="688" y="307" key="FileChooserDialogImpl/0.27.1920.1053@0.27.1920.1053" timestamp="1602843703284" />
     <state x="525" y="242" key="NewPhpClassDialog" timestamp="1602429353180">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="525" y="242" key="NewPhpClassDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1602429353180" />
-    <state x="704" y="469" key="NewPhpFileDialog" timestamp="1602693069075">
+    <state x="704" y="469" width="512" height="166" key="NewPhpFileDialog" timestamp="1602842562545">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="704" y="469" key="NewPhpFileDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1602693069075" />
+    <state x="704" y="469" width="512" height="166" key="NewPhpFileDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1602842562545" />
     <state x="412" y="208" width="1280" height="736" key="SettingsEditor" timestamp="1601393430868">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
@@ -288,9 +294,9 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="623" y="251" key="run.anything.popup/0.27.1920.1053@0.27.1920.1053" timestamp="1602749174551" />
-    <state x="572" y="256" width="774" height="678" key="search.everywhere.popup" timestamp="1601292092175">
+    <state x="572" y="256" width="774" height="678" key="search.everywhere.popup" timestamp="1602773513068">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="572" y="256" width="774" height="678" key="search.everywhere.popup/0.27.1920.1053@0.27.1920.1053" timestamp="1601292092175" />
+    <state x="572" y="256" width="774" height="678" key="search.everywhere.popup/0.27.1920.1053@0.27.1920.1053" timestamp="1602773513068" />
   </component>
 </project>
