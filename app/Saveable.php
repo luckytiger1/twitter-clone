@@ -46,6 +46,6 @@ trait Saveable
 
     public function isSavedBy(User $user)
     {
-        return (bool)$user->bookmarks->where('tweet_id', $this->id)->where('saved', true)->count();
+        return (bool)$user->bookmarks->where('tweet_id', $this->id)->count();
     }
 }

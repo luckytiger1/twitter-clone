@@ -69,7 +69,7 @@ class User extends Authenticatable
 
     public function tweets()
     {
-        return $this->hasMany(Tweet::class)->withLikes();
+        return $this->hasMany(Tweet::class);
     }
 
     public function savedTweets()
@@ -85,6 +85,11 @@ class User extends Authenticatable
     public function bookmarks()
     {
         return $this->hasMany(Bookmark::class);
+    }
+
+    public function retweets()
+    {
+        return $this->hasMany(Retweet::class);
     }
 
     public function path($append = '')

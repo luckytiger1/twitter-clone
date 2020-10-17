@@ -30,8 +30,8 @@ Route::middleware('auth')->group(function () {
     Route::post('/tweets/{tweet}/save', [\App\Http\Controllers\TweetBookmarksController::class, 'store'])->name('save');
     Route::delete('/tweets/{tweet}/save', [\App\Http\Controllers\TweetBookmarksController::class, 'destroy'])->name('unsave');
 
-    Route::post('/tweets/{tweet}/retweet', [\App\Http\Controllers\TweetBookmarksController::class, 'store'])->name('retweet');
-    Route::delete('/tweets/{tweet}/retweet', [\App\Http\Controllers\TweetBookmarksController::class, 'destroy'])->name('unretweet');
+    Route::post('/tweets/{tweet}/retweet', [\App\Http\Controllers\RetweetController::class, 'store'])->name('retweet');
+    Route::delete('/tweets/{tweet}/retweet', [\App\Http\Controllers\RetweetController::class, 'destroy'])->name('unretweet');
 
     Route::post('/profiles/{user:username}/follow', [\App\Http\Controllers\FollowsController::class, 'store'])
         ->name('follow');

@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use App\Likeable;
+use App\Retweetable;
 use App\Saveable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -13,6 +14,7 @@ class Tweet extends Model
     use HasFactory;
     use Likeable;
     use Saveable;
+    use Retweetable;
 
     protected $guarded = [];
 
@@ -44,6 +46,11 @@ class Tweet extends Model
     public function bookmarks()
     {
         return $this->hasMany(Bookmark::class);
+    }
+
+    public function retweets()
+    {
+        return $this->hasMany(Retweet::class);
     }
 
 }
