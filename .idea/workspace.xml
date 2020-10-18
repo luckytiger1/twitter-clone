@@ -23,7 +23,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9688bed1-f6f8-483b-a606-afbb815146df" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/views/components/comment-like-button.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/twitter-clone-laravel.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/twitter-clone-laravel.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Comment.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Comment.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/nginx/logs/access.log" beforeDir="false" afterPath="$PROJECT_DIR$/docker/nginx/logs/access.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -156,6 +163,8 @@
       <path value="$PROJECT_DIR$/vendor/ocramius/package-versions" />
       <path value="$PROJECT_DIR$/vendor/laracasts/generators" />
       <path value="$PROJECT_DIR$/vendor/backpack/generators" />
+      <path value="$PROJECT_DIR$/vendor/spatie/laravel-permission" />
+      <path value="$PROJECT_DIR$/vendor/backpack/permissionmanager" />
     </include_path>
   </component>
   <component name="ProjectId" id="1hRbWI7pgE5kGB73VdzljKAMzde" />
@@ -170,7 +179,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../blog-rf/blog-rocketfirm" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
-    <property name="settings.editor.selected.configurable" value="MTConfigurable" />
+    <property name="settings.editor.selected.configurable" value="Settings.Markdown" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -186,11 +195,26 @@
       <recent name="$PROJECT_DIR$/public/images" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="npm.dev">
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner scope="XML" />
       <method v="2" />
     </configuration>
+    <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.dev" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -230,7 +254,8 @@
       <workItem from="1602842090038" duration="738000" />
       <workItem from="1602843688921" duration="130000" />
       <workItem from="1602854888484" duration="344000" />
-      <workItem from="1602943011771" duration="1611000" />
+      <workItem from="1602943011771" duration="10269000" />
+      <workItem from="1603040328999" duration="685000" />
     </task>
     <servers />
   </component>
@@ -262,37 +287,53 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="697" y="296" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1600098839078" />
-    <state x="697" y="307" width="526" height="490" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1602943410962">
+    <state x="697" y="307" width="526" height="490" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1603040589569">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="697" y="307" width="526" height="490" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1602943410962" />
+    <state x="697" y="307" width="526" height="490" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1603040589569" />
     <state x="741" y="185" key="#com.jetbrains.php.refactoring.pullPush.pullUp.PhpPullUpDialog#1" timestamp="1600183052159">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="741" y="185" key="#com.jetbrains.php.refactoring.pullPush.pullUp.PhpPullUpDialog#1/0.27.1920.1053@0.27.1920.1053" timestamp="1600183052159" />
-    <state x="688" y="307" key="FileChooserDialogImpl" timestamp="1602843703284">
+    <state x="688" y="307" key="FileChooserDialogImpl" timestamp="1602950357813">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="688" y="307" key="FileChooserDialogImpl/0.27.1920.1053@0.27.1920.1053" timestamp="1602843703284" />
+    <state x="688" y="307" key="FileChooserDialogImpl/0.27.1920.1053@0.27.1920.1053" timestamp="1602950357813" />
+    <state width="1870" height="277" key="GridCell.Tab.0.bottom" timestamp="1603037430999">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1870" height="277" key="GridCell.Tab.0.bottom/0.27.1920.1053@0.27.1920.1053" timestamp="1603037430999" />
+    <state width="1870" height="277" key="GridCell.Tab.0.center" timestamp="1603037430996">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1870" height="277" key="GridCell.Tab.0.center/0.27.1920.1053@0.27.1920.1053" timestamp="1603037430996" />
+    <state width="1870" height="277" key="GridCell.Tab.0.left" timestamp="1603037430994">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1870" height="277" key="GridCell.Tab.0.left/0.27.1920.1053@0.27.1920.1053" timestamp="1603037430994" />
+    <state width="1870" height="277" key="GridCell.Tab.0.right" timestamp="1603037430997">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1870" height="277" key="GridCell.Tab.0.right/0.27.1920.1053@0.27.1920.1053" timestamp="1603037430997" />
     <state x="525" y="242" key="NewPhpClassDialog" timestamp="1602855156445">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="525" y="242" key="NewPhpClassDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1602855156445" />
-    <state x="704" y="469" width="512" height="166" key="NewPhpFileDialog" timestamp="1602842562545">
+    <state x="704" y="469" width="512" height="166" key="NewPhpFileDialog" timestamp="1603040669255">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="704" y="469" width="512" height="166" key="NewPhpFileDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1602842562545" />
-    <state x="412" y="208" width="1280" height="736" key="SettingsEditor" timestamp="1601393430868">
+    <state x="704" y="469" width="512" height="166" key="NewPhpFileDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1603040669255" />
+    <state x="412" y="208" width="1280" height="736" key="SettingsEditor" timestamp="1603037390164">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="412" y="208" width="1280" height="736" key="SettingsEditor/0.27.1920.1053@0.27.1920.1053" timestamp="1601393430868" />
+    <state x="412" y="208" width="1280" height="736" key="SettingsEditor/0.27.1920.1053@0.27.1920.1053" timestamp="1603037390164" />
     <state x="623" y="251" key="run.anything.popup" timestamp="1602749174551">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="623" y="251" key="run.anything.popup/0.27.1920.1053@0.27.1920.1053" timestamp="1602749174551" />
-    <state x="572" y="256" width="774" height="678" key="search.everywhere.popup" timestamp="1602773513068">
+    <state x="572" y="256" width="774" height="678" key="search.everywhere.popup" timestamp="1602951546596">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="572" y="256" width="774" height="678" key="search.everywhere.popup/0.27.1920.1053@0.27.1920.1053" timestamp="1602773513068" />
+    <state x="572" y="256" width="774" height="678" key="search.everywhere.popup/0.27.1920.1053@0.27.1920.1053" timestamp="1602951546596" />
   </component>
 </project>

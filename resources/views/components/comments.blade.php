@@ -18,7 +18,9 @@
                 <p>
                     {{ $comment->body }}
                 </p>
+                <x-comment-like-button :comment="$comment"/>
             </div>
+
         </div>
     </div>
 @endforeach

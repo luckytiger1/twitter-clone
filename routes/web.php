@@ -44,6 +44,10 @@ Route::middleware('auth')->group(function () {
     Route::get('/explore', [\App\Http\Controllers\ExploreController::class, 'index'])->name('explore');
 
     Route::post('/comments', [\App\Http\Controllers\CommentController::class, 'store']);
+
+    Route::post('/comments/{comment}/like', [\App\Http\Controllers\CommentLikesController::class, 'store'])->name('like-comment');
+    Route::delete('/comments/{comment}/like', [\App\Http\Controllers\CommentLikesController::class, 'destroy'])->name('dislike-comment');
+
 });
 
 Route::get('/profiles/{user:username}', [\App\Http\Controllers\ProfilesController::class, 'show'])
