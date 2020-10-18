@@ -55,6 +55,14 @@ class LikeCrudController extends CrudController
 
     }
 
+    protected function setupShowOperation()
+    {
+        $this->crud->set('show.setFromDb', false);
+        $this->setupListOperation();
+        CRUD::column('created_at');
+        CRUD::column('updated_at');
+    }
+
     /**
      * Define what happens when the Create operation is loaded.
      *
@@ -64,7 +72,6 @@ class LikeCrudController extends CrudController
     protected function setupCreateOperation()
     {
         CRUD::setValidation(LikeRequest::class);
-
 
         CRUD::addField([
             'name' => 'user_id',
@@ -84,11 +91,6 @@ class LikeCrudController extends CrudController
             'attribute' => 'body',
         ]);
 
-        /**
-         * Fields can be defined using the fluent syntax or array syntax:
-         * - CRUD::field('price')->type('number');
-         * - CRUD::addField(['name' => 'price', 'type' => 'number']));
-         */
     }
 
     /**

@@ -2,7 +2,7 @@
     class="border border-gray-300 rounded-lg bg-white flex row flex-col p-4 {{ $loop->last ? '' : 'border-b border-b-gray-400' }} mb-5">
     <div class="mr-2 flex-shrink-0 flex row">
         <div>
-            <a href="{{ route('profile', $tweet->user->name) }}">
+            <a href="{{ route('profile', $tweet->user->username) }}">
                 <img class="rounded-full mr-2"
                      width="50"
                      height="50"
@@ -43,13 +43,13 @@
         @csrf
         <div class="flex row mt-3">
             <div>
-                <a href="{{ route('profile', $tweet->user->name) }}">
-                    <img class="rounded-full mr-2"
-                         width="50"
-                         height="50"
-                         src="{{ current_user()->avatar }}"
-                         alt="avatar">
-                </a>
+
+                <img class="rounded-full mr-2"
+                     width="50"
+                     height="50"
+                     src="{{ current_user()->avatar }}"
+                     alt="avatar">
+
             </div>
             <div class="w-full">
             <textarea name="comment-body" class="w-full border border-gray-300 rounded-lg h-12"

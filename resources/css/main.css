@@ -5,5 +5,8 @@
 @tailwind utilities;
 
 #app {
-    background: #FAFAFB;
+    background-color: #FAFAFB;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
 }

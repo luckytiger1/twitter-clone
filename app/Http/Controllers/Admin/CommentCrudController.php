@@ -21,7 +21,7 @@ class CommentCrudController extends CrudController
 
     /**
      * Configure the CrudPanel object. Apply settings to all operations.
-     * 
+     *
      * @return void
      */
     public function setup()
@@ -33,28 +33,38 @@ class CommentCrudController extends CrudController
 
     /**
      * Define what happens when the List operation is loaded.
-     * 
+     *
      * @see  https://backpackforlaravel.com/docs/crud-operation-list-entries
      * @return void
      */
     protected function setupListOperation()
     {
-        CRUD::column('user_id');
-        CRUD::column('tweet_id');
+        CRUD::addColumn([
+            'name' => 'author',
+            'type' => 'relationship',
+            'label' => 'Author',
+        ]);
+        CRUD::addColumn([
+            'name' => 'tweet',
+            'type' => 'relationship',
+            'label' => 'Tweet',
+        ]);
         CRUD::column('body');
+
+    }
+
+    protected function setupShowOperation()
+    {
+        $this->crud->set('show.setFromDb', false);
+        $this->setupListOperation();
         CRUD::column('created_at');
         CRUD::column('updated_at');
-
-        /**
-         * Columns can be defined using the fluent syntax or array syntax:
-         * - CRUD::column('price')->type('number');
-         * - CRUD::addColumn(['name' => 'price', 'type' => 'number']); 
-         */
     }
+
 
     /**
      * Define what happens when the Create operation is loaded.
-     * 
+     *
      * @see https://backpackforlaravel.com/docs/crud-operation-create
      * @return void
      */
@@ -62,20 +72,31 @@ class CommentCrudController extends CrudController
     {
         CRUD::setValidation(CommentRequest::class);
 
-        CRUD::field('user_id');
-        CRUD::field('tweet_id');
+        CRUD::addField([
+            'name' => 'user_id',
+            'label' => "Author",
+            'type' => 'select2',
+            'entity' => 'author',
+            'model' => "App\Models\User", // related model
+            'attribute' => 'name',
+        ]);
+
+        CRUD::addField([
+            'name' => 'tweet_id',
+            'label' => "Tweet",
+            'type' => 'select2',
+            'entity' => 'tweet',
+            'model' => "App\Models\Tweet", // related model
+            'attribute' => 'body',
+        ]);
+
         CRUD::field('body');
 
-        /**
-         * Fields can be defined using the fluent syntax or array syntax:
-         * - CRUD::field('price')->type('number');
-         * - CRUD::addField(['name' => 'price', 'type' => 'number'])); 
-         */
     }
 
     /**
      * Define what happens when the Update operation is loaded.
-     * 
+     *
      * @see https://backpackforlaravel.com/docs/crud-operation-update
      * @return void
      */

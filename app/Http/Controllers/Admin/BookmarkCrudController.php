@@ -4,12 +4,13 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Requests\BookmarkRequest;
 use Backpack\CRUD\app\Http\Controllers\CrudController;
+use Backpack\CRUD\app\Library\CrudPanel\CrudPanel;
 use Backpack\CRUD\app\Library\CrudPanel\CrudPanelFacade as CRUD;
 
 /**
  * Class BookmarkCrudController
  * @package App\Http\Controllers\Admin
- * @property-read \Backpack\CRUD\app\Library\CrudPanel\CrudPanel $crud
+ * @property-read CrudPanel $crud
  */
 class BookmarkCrudController extends CrudController
 {
@@ -39,13 +40,24 @@ class BookmarkCrudController extends CrudController
      */
     protected function setupListOperation()
     {
+        CRUD::addColumn([
+            'name' => 'user',
+            'type' => 'relationship',
+            'label' => 'Author',
+        ]);
+        CRUD::addColumn([
+            'name' => 'tweet',
+            'type' => 'relationship',
+            'label' => 'Tweet',
+        ]);
+    }
 
-
-        /**
-         * Columns can be defined using the fluent syntax or array syntax:
-         * - CRUD::column('price')->type('number');
-         * - CRUD::addColumn(['name' => 'price', 'type' => 'number']);
-         */
+    protected function setupShowOperation()
+    {
+        $this->crud->set('show.setFromDb', false);
+        $this->setupListOperation();
+        CRUD::column('created_at');
+        CRUD::column('updated_at');
     }
 
     /**
@@ -58,13 +70,23 @@ class BookmarkCrudController extends CrudController
     {
         CRUD::setValidation(BookmarkRequest::class);
 
+        CRUD::addField([
+            'name' => 'user_id',
+            'label' => "Author",
+            'type' => 'select2',
+            'entity' => 'user',
+            'model' => "App\Models\User", // related model
+            'attribute' => 'name',
+        ]);
 
-
-        /**
-         * Fields can be defined using the fluent syntax or array syntax:
-         * - CRUD::field('price')->type('number');
-         * - CRUD::addField(['name' => 'price', 'type' => 'number']));
-         */
+        CRUD::addField([
+            'name' => 'tweet_id',
+            'label' => "Tweet",
+            'type' => 'select2',
+            'entity' => 'tweet',
+            'model' => "App\Models\Tweet", // related model
+            'attribute' => 'body',
+        ]);
     }
 
     /**

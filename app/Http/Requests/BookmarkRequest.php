@@ -26,7 +26,8 @@ class BookmarkRequest extends FormRequest
     public function rules()
     {
         return [
-            // 'name' => 'required|min:5|max:255'
+            'user_id' => 'required|unique:bookmarks,user_id,NULL,id,tweet_id,' . \request()->tweet_id,
+            'tweet_id' => 'required|unique:bookmarks,tweet_id,NULL,id,user_id,' . \request()->user_id,
         ];
     }
 

@@ -26,7 +26,8 @@ class RetweetRequest extends FormRequest
     public function rules()
     {
         return [
-            // 'name' => 'required|min:5|max:255'
+            'user_id' => 'required|unique:retweets,user_id,NULL,id,tweet_id,' . \request()->tweet_id,
+            'tweet_id' => 'required|unique:retweets,tweet_id,NULL,id,user_id,' . \request()->user_id,
         ];
     }
 

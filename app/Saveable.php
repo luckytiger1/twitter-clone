@@ -25,17 +25,11 @@ trait Saveable
         return $this->hasMany(Bookmark::class, 'tweet_id');
     }
 
-//    public function isUnSavedBy(User $user)
-//    {
-//        return (bool)$user->saves->where('tweet_id', $this->id)->where('saved', false)->count();
-//    }
 
     public function saveTweet($user = null, $saved = true)
     {
         $this->saves()->updateOrCreate([
             'user_id' => $user ? $user->id : auth()->id(),
-        ], [
-            'saved' => $saved
         ]);
     }
 

@@ -57,6 +57,8 @@ class TweetCrudController extends CrudController
         $this->setupListOperation();
         CRUD::column('body');
         CRUD::column('image');
+        CRUD::column('created_at');
+        CRUD::column('updated_at');
     }
 
     /**
@@ -69,8 +71,6 @@ class TweetCrudController extends CrudController
     {
         CRUD::setValidation(TweetRequest::class);
 
-        CRUD::field('body');
-
         CRUD::addField([
             'name' => 'user_id',
             'label' => "Author",
@@ -80,7 +80,6 @@ class TweetCrudController extends CrudController
             'attribute' => 'name',
         ]);
 
-
         CRUD::addField([   // Upload
             'name' => 'image',
             'label' => 'Image',
@@ -88,6 +87,9 @@ class TweetCrudController extends CrudController
             'upload' => true,
             'disk' => 'public', // if you store files in the /public folder, please ommit this; if you store them in /storage or S3, please specify it;
         ]);
+
+        CRUD::field('body');
+
     }
 
     /**

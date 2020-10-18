@@ -29,8 +29,6 @@ class LikeRequest extends FormRequest
         return [
             'user_id' => 'required|unique:likes,user_id,NULL,id,tweet_id,' . \request()->tweet_id,
             'tweet_id' => 'required|unique:likes,tweet_id,NULL,id,user_id,' . \request()->user_id,
-//            'user_id' => 'required|unique:likes',
-//            'tweet_id' => 'required|unique:likes'
         ];
     }
 
