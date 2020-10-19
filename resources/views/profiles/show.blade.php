@@ -36,6 +36,6 @@
     </header>
 
     @include('_timeline', [
-    'tweets' => $user->tweets
+    'tweets' => $tweets
 ])
 </x-app>

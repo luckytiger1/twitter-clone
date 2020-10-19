@@ -21238,7 +21238,7 @@ video {
   background-color: #FAFAFB;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100%;
+  min-height: 100vh;
 }
 
 @media (min-width: 640px) {

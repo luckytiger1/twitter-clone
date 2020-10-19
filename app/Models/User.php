@@ -69,6 +69,18 @@ class User extends Authenticatable
             ->get();
     }
 
+    public function profileTimeline()
+    {
+        return Tweet::join('retweets', function ($join) {
+            $join->on('tweets.id', '=', 'retweets.tweet_id')
+                ->orOn('tweets.user_id', '=', 'retweets.user_id');
+        })
+            ->select('tweets.*')
+            ->latest()
+            ->distinct()
+            ->get();
+    }
+
     public function tweets()
     {
         return $this->hasMany(Tweet::class);

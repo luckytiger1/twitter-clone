@@ -27,8 +27,8 @@ Route::middleware('auth')->group(function () {
     Route::post('/tweets/{tweet}/like', [\App\Http\Controllers\TweetLikesController::class, 'store'])->name('like');
     Route::delete('/tweets/{tweet}/like', [\App\Http\Controllers\TweetLikesController::class, 'destroy'])->name('dislike');
 
-    Route::post('/tweets/{tweet}/save', [\App\Http\Controllers\TweetBookmarksController::class, 'store'])->name('save');
-    Route::delete('/tweets/{tweet}/save', [\App\Http\Controllers\TweetBookmarksController::class, 'destroy'])->name('unsave');
+    Route::post('/tweets/{tweet}/save', [\App\Http\Controllers\BookmarksController::class, 'store'])->name('save');
+    Route::delete('/tweets/{tweet}/save', [\App\Http\Controllers\BookmarksController::class, 'destroy'])->name('unsave');
 
     Route::post('/tweets/{tweet}/retweet', [\App\Http\Controllers\RetweetController::class, 'store'])->name('retweet');
     Route::delete('/tweets/{tweet}/retweet', [\App\Http\Controllers\RetweetController::class, 'destroy'])->name('unretweet');
