@@ -1,9 +1,9 @@
 <div class="bg-blue-100 rounded-lg p-4">
 
-    <h3 class="font-bold text-xl mb-4">Following</h3>
+    <h3 class="font-bold text-xl mb-4">Followers</h3>
 
     <ul>
-        @forelse(current_user()->follows as $user)
+        @forelse(current_user()->followers as $user)
             <li class="mb-4">
                 <a class="flex items-center" href="{{ route('profile', $user->username) }}">
                     <img class="rounded-full mr-2 flex-shrink-0"
@@ -15,7 +15,7 @@
                 </a>
             </li>
         @empty
-            <p>No friends yet!</p>
+            <p>No followers yet!</p>
         @endforelse
     </ul>
 </div>

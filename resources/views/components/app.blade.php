@@ -14,8 +14,13 @@
 
                 </div>
                 @if(auth()->check())
-                    <div class="lg:w-1/6">
-                        @include('_friends-list')
+                    <div class="column">
+                        <div class="lg:w-full mb-4">
+                            @include('_friends-list')
+                        </div>
+                        <div class="lg:w-full">
+                            @include('_followers-list')
+                        </div>
                     </div>
                 @endif
             </div>

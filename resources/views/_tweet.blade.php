@@ -64,7 +64,7 @@
 
             </div>
             <input type="hidden" name="tweet_id" id="tweet_id" value="{{ $tweet->id }}">
-            <button type="submit" class="bg-blue-500 rounded-lg shadow py-2 px-2 text-white">Tweet!</button>
+            <button type="submit" class="bg-blue-500 rounded-lg shadow py-2 px-2 text-white">Reply!</button>
         </div>
     </form>
     <x-comments :tweet="$tweet"/>
