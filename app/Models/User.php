@@ -71,10 +71,25 @@ class User extends Authenticatable
 
     public function profileTimeline()
     {
+//        dd(Tweet::join('retweets', function ($join) {
+//            $join->on('tweets.id', '=', 'retweets.tweet_id')
+//                ->orOn('tweets.user_id', '=', 'retweets.user_id');
+//        })
+//            ->select('tweets.*')
+//            ->latest()
+//            ->get());
+//        return Tweet::join('retweets', 'tweets.id', '=', 'retweets.tweet_id')
+//            ->join('comments', 'tweets.id', '=', 'comments.tweet_id')
+//            ->where('retweets.user_id', $this->id)
+//            ->select('tweets.*')
+//            ->latest()
+//            ->distinct()
+//            ->get();
         return Tweet::join('retweets', function ($join) {
             $join->on('tweets.id', '=', 'retweets.tweet_id')
                 ->orOn('tweets.user_id', '=', 'retweets.user_id');
         })
+            ->where('retweets.user_id', $this->id)
             ->select('tweets.*')
             ->latest()
             ->distinct()

@@ -29,7 +29,7 @@ trait Followable
             User::class,
             'follows',
             'following_user_id'
-        )->where('following_user_id', $this->id);
+        );
     }
 
     public function follow(User $user)
