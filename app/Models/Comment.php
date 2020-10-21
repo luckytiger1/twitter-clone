@@ -34,6 +34,11 @@ class Comment extends Model
         return (bool)$user->commentLikes->where('comment_id', $this->id)->count();
     }
 
+    public function replies()
+    {
+        return $this->hasMany(Comment::class, 'parent_id');
+    }
+
     public function author()
     {
         return $this->belongsTo(User::class, 'user_id');
@@ -42,5 +47,10 @@ class Comment extends Model
     public function tweet()
     {
         return $this->belongsTo(Tweet::class, 'tweet_id');
+    }
+
+    public function commentable()
+    {
+        return $this->morphTo();
     }
 }

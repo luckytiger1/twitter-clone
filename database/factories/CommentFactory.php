@@ -26,7 +26,7 @@ class CommentFactory extends Factory
     {
         return [
             'user_id' => User::factory(),
-            'tweet_id' => Tweet::factory(),
+//            'commentable_type' => Tweet::factory(),
             'body' => $this->faker->sentence
         ];
     }

@@ -40,7 +40,7 @@ class Tweet extends Model
 
     public function comments()
     {
-        return $this->hasMany(Comment::class)->latest();
+        return $this->morphMany(Comment::class, 'commentable')->whereNull('parent_id')->latest();
     }
 
     public function bookmarks()

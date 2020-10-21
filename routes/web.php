@@ -48,6 +48,8 @@ Route::middleware('auth')->group(function () {
     Route::post('/comments/{comment}/like', [\App\Http\Controllers\CommentLikesController::class, 'store'])->name('like-comment');
     Route::delete('/comments/{comment}/like', [\App\Http\Controllers\CommentLikesController::class, 'destroy'])->name('dislike-comment');
 
+    Route::post('/replies', [\App\Http\Controllers\CommentController::class, 'replyStore']);
+
 });
 
 Route::get('/profiles/{user:username}', [\App\Http\Controllers\ProfilesController::class, 'show'])

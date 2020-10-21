@@ -67,7 +67,8 @@
             <button type="submit" class="bg-blue-500 rounded-lg shadow py-2 px-2 text-white">Reply!</button>
         </div>
     </form>
-    <x-comments :tweet="$tweet"/>
+    @include('components.comments', ['comments' => $tweet->comments, 'tweet_id' => $tweet->id])
+    {{--        <x-comments :comments="$tweet->comments"/>--}}
     <div>
 
     </div>

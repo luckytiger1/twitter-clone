@@ -23,12 +23,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9688bed1-f6f8-483b-a606-afbb815146df" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/views/components/replies.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Followable.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Followable.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CommentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CommentController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Comment.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Comment.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Tweet.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Tweet.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/CommentFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/CommentFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_06_030400_create_comments_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_06_030400_create_comments_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/CommentSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/CommentSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker/nginx/logs/access.log" beforeDir="false" afterPath="$PROJECT_DIR$/docker/nginx/logs/access.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/_tweet.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/_tweet.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/components/comments.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/comments.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -257,7 +263,9 @@
       <workItem from="1603113768596" duration="140000" />
       <workItem from="1603113969370" duration="7227000" />
       <workItem from="1603173410420" duration="4001000" />
-      <workItem from="1603193608774" duration="4635000" />
+      <workItem from="1603193608774" duration="5349000" />
+      <workItem from="1603257009725" duration="3501000" />
+      <workItem from="1603290850520" duration="1185000" />
     </task>
     <servers />
   </component>
@@ -325,10 +333,10 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="525" y="242" key="NewPhpClassDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1602855156445" />
-    <state x="704" y="469" width="512" height="166" key="NewPhpFileDialog" timestamp="1603122177502">
+    <state x="704" y="469" width="512" height="166" key="NewPhpFileDialog" timestamp="1603291403171">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="704" y="469" width="512" height="166" key="NewPhpFileDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1603122177502" />
+    <state x="704" y="469" width="512" height="166" key="NewPhpFileDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1603291403171" />
     <state x="412" y="208" width="1280" height="736" key="SettingsEditor" timestamp="1603037390164">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
