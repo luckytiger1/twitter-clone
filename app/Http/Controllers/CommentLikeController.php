@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Comment;
 use Illuminate\Http\Request;
 
-class CommentLikesController extends Controller
+class CommentLikeController extends Controller
 {
     public function store(Comment $comment)
     {

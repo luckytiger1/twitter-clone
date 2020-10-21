@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Tweet;
 use Illuminate\Http\Request;
 
-class BookmarksController extends Controller
+class BookmarkController extends Controller
 {
     public function index()
     {

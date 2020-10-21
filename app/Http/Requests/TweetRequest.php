@@ -15,7 +15,7 @@ class TweetRequest extends FormRequest
     public function authorize()
     {
         // only allow updates if the user is logged in
-        return backpack_auth()->check();
+        return auth()->check();
     }
 
     /**
@@ -26,7 +26,8 @@ class TweetRequest extends FormRequest
     public function rules()
     {
         return [
-            'body' => 'required|min:5|max:255'
+            'body' => 'required|max:255',
+            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048'
         ];
     }
 

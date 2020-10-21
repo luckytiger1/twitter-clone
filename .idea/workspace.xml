@@ -23,17 +23,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9688bed1-f6f8-483b-a606-afbb815146df" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/components/replies.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CommentController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CommentController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Comment.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Comment.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Tweet.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Tweet.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/factories/CommentFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/CommentFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_10_06_030400_create_comments_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_10_06_030400_create_comments_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/CommentSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/CommentSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/BookmarksController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/BookmarkController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CommentLikesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CommentLikeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TweetsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/TweetController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/TweetRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/TweetRequest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker/nginx/logs/access.log" beforeDir="false" afterPath="$PROJECT_DIR$/docker/nginx/logs/access.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/_tweet.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/_tweet.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/components/comments.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/components/comments.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/nginx/logs/error.log" beforeDir="false" afterPath="$PROJECT_DIR$/docker/nginx/logs/error.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -265,7 +261,7 @@
       <workItem from="1603173410420" duration="4001000" />
       <workItem from="1603193608774" duration="5349000" />
       <workItem from="1603257009725" duration="3501000" />
-      <workItem from="1603290850520" duration="1185000" />
+      <workItem from="1603290850520" duration="3129000" />
     </task>
     <servers />
   </component>
@@ -293,10 +289,10 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="721" y="218" key="#com.intellij.ide.util.MemberChooser/0.27.1920.1053@0.27.1920.1053" timestamp="1599996620196" />
-    <state x="705" y="276" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1602427834188">
+    <state x="705" y="27" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1603292685253">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="705" y="276" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1602427834188" />
+    <state x="705" y="27" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1603292685253" />
     <state x="697" y="296" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1600098839078">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
